@@ -24,6 +24,11 @@ methods(Hidden=true) % override methods to hide them
         l = addlistener@handle(varargin{:});
     end
 
+    % https://mathworks.com/help/matlab/ref/handle.listener.html
+    function l = listener(varargin) % introduced in v9.3 (R2017b)
+        l = listener@handle(varargin{:});
+    end
+
     % https://mathworks.com/help/matlab/ref/handle.notify.html
     function notify(varargin)
         notify@handle(varargin{:});
